@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KARTHIKA K — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="profile-photo">
+        <img src="https://i.postimg.cc/qqFvZkgJ/IMG-20250708-WA0010.jpg" alt="KARTHIKA K Profile Photo">
+      </div>
+      <h1>KARTHIKA K</h1>
+      <p class="tagline">Artist • Designer • Coder</p>
+    </header>
+    
+    <!-- About -->
+    <section id="about">
+      <h2>👋 ABOUT ME </h2>
+      <p>I'm a Computer Science student passionate about mixing creativity and technology. I love transforming ideas into digital art, coding solutions, and working on innovative projects that inspire people.</p>
+    </section>
+    
+    <!-- Skills -->
+    <section id="skills">
+      <h2>💡 SKILLS</h2>
+      <ul class="skills">
+        <li>App Developer</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>UI/UX Design</li>
+        <li>Figma & Prototyping</li>
+        <li>React.js</li>
+        <li>Photography</li>
+        <li>Video Editing</li>
+        <li>Content Creation</li>
+      </ul>
+    </section>
+    
+    <!-- Projects -->
+    <section id="projects">
+      <h2>🚀 PROJECTS</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>Designed and developed a responsive personal portfolio using HTML, CSS, and glassmorphism UI.</p>
+        </div>
+        <div class="project-card">
+          <h3>Logo Collection</h3>
+          <p>A creative collection of modern, minimalistic logos designed for startups and personal brands.</p>
+        </div>
+      </div>
+      <button class="add-project" id="addProjectBtn">➕ <span>Add Project</span></button>
+    </section>
+    
+    <!-- Contact -->
+    <section id="contact">
+      <h2>📬 CONTACT</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:karthikak.dev@gmail.com">karthikak.dev@gmail.com</a></li>
+        <li>Phone: <a href="tel:+919876543210">+91 98765 43210</a></li>
+      </ul>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 KARTHIKA K. All Rights Reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Add new project dynamically
+    document.getElementById("addProjectBtn").addEventListener("click", function () {
+      const projectGrid = document.querySelector(".projects-grid");
+      const newProject = document.createElement("div");
+      newProject.classList.add("project-card");
+      newProject.innerHTML = `
+        <h3>New Project</h3>
+        <p>This is a newly added project. Update its content in script.js.</p>
+      `;
+      projectGrid.appendChild(newProject);
+      // Scroll smoothly to new project
+      newProject.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  </script>
+</body>
+</html>
